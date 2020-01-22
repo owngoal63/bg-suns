@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load wagtailcore_tags %}
+{% load wagtailimages_tags %}
+
+{% block content %}
+    <div>
+        <h1>
+        {{ self.subtitle }}
+    </h1>
+    </div>
+    
+    <br>
+
+    {% for block in page.content %}
+        {% include_block block %}
+    {% endfor %}
+
+    {% image self.flex_image fill-200x200 as img %}
+
+    <hr>
+    <table width="100%">
+        <tr>
+            <td align="center">
+                <img src="{{ img.url }}" height="200px" alt="{{ img.alt }}"/>
+            </td>
+        </tr>
+    </table>
+
+
+{% endblock %}

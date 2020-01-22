@@ -1,0 +1,194 @@
+.bar {}
+
+.text {}
+
+.image {}
+
+.textWeekNum {
+  color: black;
+  font-weight: bold;
+
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: white;
+  stroke-width: 1px;
+  shape-rendering: crispEdges;
+}
+.axis text {
+  fill: white;
+  stroke: white;
+}
+
+.x path {
+	display: none;
+}
+.toolTip {
+position: absolute;
+  display: none;
+  min-width: 80px;
+  height: auto;
+  background: none repeat scroll 0 0 #ffffff;
+  border: 1px solid #6F257F;
+  padding: 14px;
+  text-align: center;
+}
+
+div#svgContainer{
+       height: 570px;
+       width: 1000px;
+       border:2px solid #000;
+       overflow-y: auto;
+       }
+       
+       
+       
+/* Styles Rory added */ 
+
+body {
+  /* margin: 12px; */
+  /* background-image: url("https://png.pngtree.com/thumb_back/fh260/back_pic/03/92/90/9257e4941eb79e7.jpg"); */
+  /* background-image: url("https://www.bethq.com/sites/default/files/uploads/01-wembley-stadium.jpg"); */
+  /* background-image: url("images/basketball-background.jpg");
+  background-image: url("images/ball-basketball-basketball-court-basketball-hoop.jpg"); */
+  /* background-image: url("/static/images/photo-of-basketball-on-floor.jpg");  */
+  background-image: url("/static/images/sport-basketball-basketball-basket.jpg"); 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.header{
+  text-align: center;
+  font-family: sans-serif;
+  color: white;
+  font-weight: bold;
+  background-color: rgb(0,0,0,0.7);
+  height: 70px;
+  font-size: 15px;
+  margin-bottom: 5px;
+
+}
+
+.graph-container{
+  /* background-image: url("https://png.pngtree.com/thumb_back/fh260/back_pic/03/92/90/9257e4941eb79e7.jpg");
+  background-image: url("https://www.bethq.com/sites/default/files/uploads/01-wembley-stadium.jpg");
+  background-image: url("images/basketball-background.jpg");
+  background-image: url("images/ball-basketball-basketball-court-basketball-hoop.jpg");
+  background-image: url("/static/images/photo-of-basketball-on-floor.jpg"); */
+  background-image: url("/static/images/sport-basketball-basketball-basket.jpg"); 
+  
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0 auto;
+}
+
+#text{
+  font-size: 20px;
+}
+
+
+.team-selector{
+  margin-top: 20px;
+  /* transform: translateY(-632px); */
+  height: 342px;
+  width: 136px;
+  border: solid 2px black;
+  background-color: rgb(0,0,0,0.7);
+  font-family: sans-serif;
+  font-size: 14px;
+  color: white;
+}
+
+.team-selector option {
+  width: 113px;
+
+}
+
+.userInstructions{
+  text-align: center;
+  /* transform: translateY(-550px); */
+  background-color: rgb(0,0,0,0.7);
+  color: white;
+  font-family: sans-serif;
+  font-size: 14px;
+}
+
+/* .container-fluid{
+  transform: translateY(-500px);  
+} */
+
+.teamTrackingStats{
+  text-align: center;
+  transform: translateY(-540px);
+  background-color: rgb(0,0,0,0.7);
+  color: white;
+  font-family: sans-serif;
+  font-size: 14px;
+}
+
+.infotext{
+  padding-top: 10px;
+  font-size: 12px;
+  font-family: sans-serif;
+  /* transform: translateY(-650px); */
+  color: white;
+  
+}
+
+.teamsbutton{
+  /* transform: translateY(-650px); */
+  background-color: black;
+  color: white;
+  font-family: sans-serif;
+  font-size: 14px;
+}
+
+.weekbutton{
+  color: white;
+  background-color: black;
+  font-family: sans-serif;
+  font-size: 14px;
+}
+
+
+.card-body{
+  color: red;
+  background-color: #eee;
+  font-family: cursive;
+}
+
+.card-img{
+  position: relative;
+  float: left;
+  width:  80px;
+  height: 80px;
+  background-position: 50% 50%;
+  background-repeat:   no-repeat;
+  background-size:     cover;
+}
+
+.card-text{
+  color: grey;
+  background-color: #eee;
+  font-family: sans-serif;
+  font-size: 12px;
+}
+
+.card-title{
+  color: red;
+  background-color: #eee;
+  font-family: sans-serif;
+  font-size: 16px;
+  font-weight:bold;
+}
+
+.card-smalltext{
+  color: grey;
+  background-color: #eee;
+  font-family: sans-serif;
+  font-size: 12px;
+}

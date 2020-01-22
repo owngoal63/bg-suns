@@ -1,0 +1,25 @@
+{% load wagtailimages_tags %}
+
+
+<div class="container mb-sm-5 mt-sm-5">
+    <h2 class="text-center mb-sm-5">BG Suns playerrerrrrrr</h2>
+
+    <div class="card-deck">
+        {% for card in self.cards %}
+            {% image card.image fill-200x200 as img %}
+            <div class="card text-white bg-secondary mb-3" style="min-width: 12rem; max-width: 12rem;">
+                <img src="{{ img.url }}" alt="{{ img.alt }}" class="card-img-top" />
+                <div class="card-body bg-secondary">
+                    <h5>{{ card.name }}</h5>
+                    <p class="card-text">{{ card.position }}</p>
+
+                        <a href="{{ card.button_page.url }}" class="btn btn-primary">
+                            Learn More
+                        </a>
+                
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+    

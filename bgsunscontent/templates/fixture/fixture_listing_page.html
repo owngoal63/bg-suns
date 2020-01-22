@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/fixture.css' %}">
+{% endblock %}
+
+{% load wagtailimages_tags wagtailroutablepage_tags %}
+
+{% block content %}
+
+<!-- <div class="container mb-sm-5 mt-sm-5">
+    <h2 class="text-center mb-sm-5">{{self.custom_title}}</h2>
+    
+        <div class="card-deck">
+            {% for fixture in fixture_list %}
+            {% image fixture.hometeam_image fill-200x200 as img %}
+            <div class="card text-white bg-secondary mb-3" style="min-width: 12rem; max-width: 12rem;">
+                <img src="{{ img.url }}" alt="{{ img.alt }}" class="card-img-top" />
+                <div class="card-body bg-secondary">
+                    <h5>{{ fixture.hometeam }}</h5>
+                    <p class="card-text">{{ fixture.awayteam }}</p>
+                    
+                    <a href="{{ fixture.url }}" class="btn btn-primary">
+                        Learn More
+                    </a>
+                    
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+</div> -->
+
+<div class="container-fluid">
+    <h2 class="text-center">{{self.custom_title}}</h2>
+    
+        <div class="card-deck">
+            {% for fixture in fixture_list %}
+            {% image fixture.hometeam_image fill-80x80 as img1 %}
+            {% image fixture.awayteam_image fill-80x80 as img2 %}
+            <div class="card mb-3" style="min-width: 25rem; max-width: 25rem;">
+                <h4>{{ fixture.fixture_status }}</h4>
+                <h6 class="date">{{ fixture.fixture_date_time }}</h6>
+                <div id="container">
+                    <div class="match-details">
+                        <div class="team1">
+                            <img src="{{ img1.url }}" alt="{{ img1.alt }}"/>
+                        </div>
+                    </div> 
+                    <div class="details">
+                        <h6 class="versus">VS</h6>
+                        <h6 class="venue">{{ fixture.fixture_location }}</h6>
+                    </div>   
+                    
+                    <div class="match-details">
+                        <div class="team2">
+                            <img src="{{ img2.url }}" alt="{{ img2.alt }}"/>
+                        </div>
+                    </div>
+                </div> 
+                <div id="containerx">
+                    <div class="team-names">
+                        <div class="match-detailsx">
+                            <div class="team1x">
+                                <h6 class="team_name">{{ fixture.hometeam }}</h6>
+                            </div>
+                        </div> 
+                        
+                        <div class="match-detailsx">
+                            <div class="team2x">
+                                <h6 class="team_name">{{ fixture.awayteam }}</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+            {% endfor %}
+        </div>
+</div>
+
+<br>
+<a class="btn btn-primary btn-sm" href="{% routablepageurl page 'leaguestats' %}" role="button">Track League Positions</a>
+
+{% endblock content %} 

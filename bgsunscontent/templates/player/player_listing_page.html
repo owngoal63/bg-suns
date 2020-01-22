@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% load wagtailimages_tags wagtailroutablepage_tags %}
+
+{% block content %}
+
+<!-- <a href="{% routablepageurl page 'leaguestats' %}">Track League Positions</a> -->
+
+<div class="container mb-sm-5 mt-sm-5">
+    <h2 class="text-center mb-sm-5">{{self.custom_title}}</h2>
+    
+        <div class="card-deck">
+            {% for player in player_list %}
+            {% image player.player_image fill-200x200 as img %}
+            <div class="card redcard text-white bg-secondary mb-3" style="min-width: 12rem; max-width: 12rem;">
+                <img src="{{ img.url }}" alt="{{ img.alt }}" class="card-img-top" />
+                <div class="card-body bg-secondary">
+                    <h5>{{ player.name }}</h5>
+                    <p class="card-text">{{ player.nickname }}</p>
+                    
+                    <a href="{{ player.url }}" class="btn btn-primary">
+                        Learn More
+                    </a>
+                    
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+<a class="btn btn-primary btn-sm" href="{% routablepageurl page 'scorerstats' %}" role="button">View Top Scorers</a>
+    {% endblock content %} 

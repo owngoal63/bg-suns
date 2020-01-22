@@ -1,0 +1,10 @@
+[
+    {"id":1,"team":"Archie","v1":1,"v2":2,"v3":1,"v4":1,"v5":2,"v6":1,"v7":2,"v8":3,"v9":2,"v10":2,"ground":"Stamford Bridge",	"manager":"Maurizio Sarri"},
+    {"id":2,"team":"Allen","v1":2,"v2":3,"v3":3,"v4":2,"v5":1,"v6":3,"v7":3,"v8":2,"v9":3,"v10":3, "ground":"Anfield",	"manager":"Jurgen Klopp"},
+    {"id":3,"team":"Callum","v1":3,"v2":6,"v3":6,"v4":6,"v5":5,"v6":8,"v7":7,"v8":6,"v9":6,"v10":6, "ground":"Vitality Stadium",	"manager":"Eddie Howe"},
+    {"id":4,"team":"Dom","v1":4,"v2":10,"v3":10,"v4":15,"v5":2,"v6":11,"v7":3,"v8":4,"v9":5,"v10":14,"ground":"Selhurst Park",	"manager":"Roy Hodgson"},
+    {"id":5,"team":"George","v1":5,"v2":1,"v3":5,"v4":4,"v5":3,"v6":2,"v7":1,"v8":1,"v9":1,"v10":1,"ground":"Etihad Stadium",	"manager":"Josep Guardiola"},
+    {"id":6,"team":"Gabi","v1":6,"v2":4,"v3":4,"v4":3,"v5":4,"v6":4,"v7":6,"v8":9,"v9":7,"v10":7,"ground":"Vicarage Road",	"manager":"Javier Gracia"},
+    {"id":7,"team":"Jay","v1":7,"v2":9,"v3":13,"v4":10,"v5":8,"v6":7,"v7":10,"v8":8,"v9":10,"v10":8,"ground":"Old Trafford",	"manager":"Ole Gunnar Solskjær"},
+    {"id":8,"team":"Pete","v1":8,"v2":5,"v3":2,"v4":5,"v5":6,"v6":5,"v7":4,"v8":5,"v9":5,"v10":5,"ground":"Tottenham Hotspur Stadium",	"manager":"Mauricio Pochettino"}
+]

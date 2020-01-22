@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+body {
+    background-image: url("/static/images/photo-of-basketball-on-floor.jpg"); 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.card {
+    font-family: 'Montserrat', sans-serif;
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+    background:rgba(255,255,255,0.5);
+    border-radius: 10px;
+    box-shadow: 0 0 0 10px rgba(255,255,255,0.2);
+    color: black;
+    overflow: hidden;
+    width:100%;
+    transition: 0.5s;
+}
+
+.card:hover {
+    /* border: black 1px solid; */
+    background:#fff;
+}
+
+.card h4 {
+    width:100%;
+    margin:0;
+    text-align: center;
+    font-weight: bold;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+
+.card:hover h4 {
+    background:#ff0057;
+    color: #fff;
+}
+
+.team1 {
+    /* width: 180px; */
+    /* float: left; */
+    /* padding-left: 5px; */
+    box-sizing: border-box;
+    text-align:center;
+    /* background-color: yellow; */
+}
+
+.team2 {
+    /* width: 180px; */
+    /* float: right; */
+    /* padding-right: 5px; */
+    box-sizing: border-box;
+    text-align:center;
+    /* background-color: yellow; */
+}
+
+/* .team1 img,
+.team2 img {
+    width:100%
+} */
+
+#container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+  }
+
+  #containerx {
+    position: relative;
+    /* height: 100%;
+    width: 100%; */
+    display: flex;
+  }
+
+  .team-names {
+    height: 100%;
+    width: 100%;
+    display: flex; 
+
+  }
+
+  .card:before {
+    content: '';
+    position: absolute;
+    bottom:0%;
+    left: -52%;
+    width: 51%;
+    height: 40px;
+    background:#7300ab;
+    transition:0.5s;
+    z-index: 0;
+    box-sizing: border-box;
+    border-top: 5px solid #430064;
+    /* border-bottom-left-radius: 10px; */
+    transform: skewX(-10deg);
+    /* border-bottom-right-radius: 10px;  */
+}
+
+.card:hover:before {
+    left:-1%
+}
+
+.card:after {
+    content: '';
+    position: absolute;
+    bottom:0%;
+    right: -52%;
+    width: 51%;
+    height: 40px;
+    background: darkorange;
+    transition:0.5s;
+    z-index: 0;
+    box-sizing: border-box;
+    border-top: 5px solid chocolate;
+    /* border-bottom-left-radius: 10px; */
+    transform: skewX(-10deg);
+    /* border-bottom-right-radius: 10px;  */
+}
+
+.card:hover:after {
+    right:-1%
+}
+  
+/* .team-names:before {
+    content: '';
+    position: absolute;
+    bottom:0%;
+    left: -50%;
+    width: 50%;
+    height: 40px;
+    background:#7300ab;
+    transition:0.5s;
+    z-index: 0;
+    box-sizing: border-box;
+    border-top: 5px solid #430064;
+    border-bottom-left-radius: 10px;
+    transform: skewX(-10deg);
+    /* border-bottom-right-radius: 10px;  
+} */
+
+/*.team-names:hover:before {
+    left:-1%
+} */
+
+.details {
+    width: 50%;
+    position: relative;
+    text-align: center;
+}
+
+.match-details {
+    position: relative;
+    width: 25%;
+}
+
+.match-detailsx {
+    position: relative;
+    width: 50%;
+    z-index: 1;
+}
+
+.versus {
+    width:50px;
+    height:50px;
+    margin-top: 10px;
+    margin-left: 75px;
+    font-size: 24px;
+    border-radius:50%;
+    background:#e91e63;
+    color:#fff;
+    text-align: center;
+    line-height: 50px;
+}
+
+.team1x {
+    /* width: 180px; */
+    /* float: left; */
+    /* padding: 10px 20px 20px; */
+    box-sizing: border-box; 
+    text-align:left;
+    padding-left: 10px;
+}
+
+.team2x {
+    /* width: 180px; */
+    /* float: right;  */
+    /* padding: 10px 20px 20px; */
+    box-sizing: border-box;
+    text-align:right;
+    padding-right: 10px;
+    /* background-color: yellow; */
+}
+
+.card:hover .team1x h6.team_name {
+    color: #fff;
+}
+
+h6 {
+    font-weight: bold; 
+}
+
+.date {
+    margin-top: 2%;
+}
+
+
+.venue {
+    margin-bottom: 8%;
+}
+
+.text-center {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+
+

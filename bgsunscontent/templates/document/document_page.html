@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% load wagtailcore_tags %}
+
+{% block content %}
+
+
+<div class="container">
+    
+    <h2 class="text-center">{{self.document_page_title}}</h2>
+
+    {{ self.document_page_description|richtext }}
+
+
+      {# Example of an Orderable from home/models.py #}
+      
+          <div class="document-inner">
+              {% for document in self.related_documents.all %}
+                  <div class="document-item{% if forloop.counter == 1 %} active{% endif %}">
+                    <div class="container"> 
+                        <a href="{{ document.related_document.url }}" target="_blank">{{ document.related_document.title }}</a>
+                    </div>  
+                  </div>
+              {% endfor %}
+          </div>
+      
+</div>  
+
+{% endblock %}

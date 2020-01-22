@@ -1,0 +1,152 @@
+body {
+    background-color: rgb(36, 35, 41);
+  }
+
+.jumbotron {
+    /* height: 360px; */
+    height: 85vh;
+    
+}
+
+.navbar {
+    height: 5vh;
+}
+
+.footer {
+    height: 5vh;
+}
+
+.carousel-inner{
+    width:100%;
+    max-height: 450px !important;
+  }
+
+#bglogo {
+    position:relative;
+    top:-30px;
+
+}  
+
+.card-deck{
+      width: 100vw;
+      margin: 0 auto;
+  }
+
+.row{
+    margin-top: 20px;
+}
+
+.redcard:hover{
+    border: 2px red solid; 
+}
+
+.card{
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    margin: 0 auto; 
+    float: none; 
+}
+
+.player-name{
+    font-size: 18px;
+    margin-bottom: 0;
+    margin-top: 0;
+    font-style: normal;
+    color: darkgrey
+}
+
+.player-role{
+    font-size: 16px;
+    font-style: oblique;
+    color: grey;
+}
+
+
+.card-text{
+    font-size: 12px;
+    color: darkgrey
+}
+
+#logo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 200px;
+}
+
+/* .containerx {
+    width: 1200px;
+    min-height: 500px;
+    background: #ff00ff;
+    margin: 70px auto 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+} */
+
+.containerx .box {
+    position: relative;
+    width: 350px;
+    height: 350px;
+    /* background: #ffff00; */
+    margin: 10px;
+    box-sizing: border-box;
+    display: inline-block;
+
+}
+
+.containerx .box .imgBox {
+    position: relative;
+    overflow: hidden;
+}
+
+.containerx .box .imgBox img {
+    max-width: 100%;
+    transition: transform 2s;
+}
+
+.containerx .box:hover .imgBox img {
+    transform: scale(1.2);
+}
+
+.containerx .box .details {
+    position: absolute;
+    top:5px;
+    left:5px;
+    bottom:5px;
+    right:5px;
+    background:rgba(0,0,0,.7);
+    transform: scaleY(0);
+    transition: transform 1s;
+
+}
+
+.containerx .box:hover .details {
+    transform: scaleY(1);
+}
+
+.containerx .box .details .content {
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    text-align: center;
+    padding: 60px;
+    color: #fff;
+}
+
+.containerx .box .details .content h2 {
+    margin:0;
+    padding: 0;
+    font-size: 20px;
+    color:#ff0;
+}
+
+.containerx .box .details .content h5 {
+    margin:0;
+    padding: 0;
+    font-size: 18px;
+    color:#fff;
+}
