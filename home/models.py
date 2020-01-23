@@ -3,6 +3,7 @@ from django.db import models
 
 from wagtail.core.models import Page, Orderable
 from wagtail.core.fields import RichTextField
+from wagtail.core.fields import StreamField
 # from wagtail.contrib.routable_page.models import RoutablePageMixin, route
 
 from wagtail.admin.edit_handlers import (
@@ -16,6 +17,7 @@ from wagtail.admin.edit_handlers import (
 from wagtail.images.edit_handlers import ImageChooserPanel
 from modelcluster.fields import ParentalKey
 
+from . import blocks
 
 class HomePageCarouselImages(Orderable):
     """Between 1 and 5 images for the home page carousel."""
@@ -63,6 +65,14 @@ class HomePage(Page):
         related_name="+"
     )
 
+    news_content = StreamField(
+		[
+			("news_items", blocks.NewsBlock()),
+		],
+		null=True,
+		blank=True,
+	)
+
     content_panels = Page.content_panels + [
         MultiFieldPanel(
             [
@@ -78,6 +88,7 @@ class HomePage(Page):
             [InlinePanel("carousel_images", max_num=5, min_num=1, label="Image")],
             heading="Carousel Images",
         ),
+        StreamFieldPanel("news_content"),
     ]
 
     class Meta:

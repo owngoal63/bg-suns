@@ -1,0 +1,20 @@
+{% load wagtailimages_tags %}
+
+
+<div class="container mb-sm-5 mt-sm-5">
+    <h2 class="text-center mb-sm-5">BG Suns</h2>
+
+    <div class="card-deck">
+        {% for news_item in self.news_items %}
+            <div class="card text-white bg-secondary mb-3" style="min-width: 12rem; max-width: 12rem;">
+
+                <div class="card-body bg-secondary">
+                    <h5>{{ news_item.headline }}</h5>
+                    <p class="card-text">{{ news_item.story }}</p>
+                
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+    

@@ -1,19 +1,37 @@
-body {
-    background-color: rgb(36, 35, 41);
-  }
-
-.jumbotron {
-    /* height: 360px; */
-    height: 85vh;
-    
+* {
+    margin: 0px;
+    padding: 0px;
 }
 
+body {
+    background-color: rgb(36, 35, 41);
+    font-size: 16px;
+  }
+
+
+.home-container {
+    background-image: linear-gradient( rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('{{ img.url }}'); 
+    background-size:cover; 
+    color: #fff;
+    height: 85vh;
+}
+
+#borderforcontainer{
+    /* border: 3px solid rgb(223,105,26); */
+    border: 2px solid rgb(144, 26, 223);
+    
+
+}
 .navbar {
     height: 5vh;
+
 }
 
 .footer {
-    height: 5vh;
+    height: 10vh;
+    padding-top: 30px;
+    background-color: rgb(36, 35, 41);
+
 }
 
 .carousel-inner{
@@ -22,19 +40,54 @@ body {
   }
 
 #bglogo {
-    position:relative;
-    top:-30px;
+    position: fixed;
+    top:0px;
 
 }  
+
+#headline {
+    margin-top: 10%;
+}
+
+
+
+.article{
+    background-color: rgba(0, 0, 0, 0.2);
+    position: relative;
+    height: 75vh;
+    top: 15px;
+    right: 15px;
+}
+
+#news-heading{
+    margin-top: 5px;
+    text-align: center;
+    font-size: 2rem;
+
+}
+
+hr {
+    color: white;
+    background-color: rgb(223,105,26);
+}
+
+.align {
+    margin-left: 4%;
+}
+
+.btn-primary {
+    border-radius: 10%;
+    margin-bottom: 5%;
+}
+
+
 
 .card-deck{
       width: 100vw;
       margin: 0 auto;
   }
 
-.row{
-    margin-top: 20px;
-}
+
 
 .redcard:hover{
     border: 2px red solid; 
