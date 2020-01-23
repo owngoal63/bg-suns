@@ -23,9 +23,6 @@
         </aside>
       </div> -->
 
-      {% for block in page.news_content %}
-        {% include_block block %}
-    {% endfor %}
 
       <div class="container-fluid home-container" style="background-image: linear-gradient( rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('{{ img.url }}'); background-size:cover; color: #fff ">
 
@@ -71,7 +68,7 @@
 
 
 
-          <div class="col-12 col-md-4 offset-md-1 article">
+          <!-- <div class="col-12 col-md-4 offset-md-1 article">
 
             <h1 id="news-heading">News</h1>
             <div class="news-item">
@@ -98,8 +95,11 @@
               <hr>
 
             </div>
-          </div>
-
+          </div> -->
+        
+        {% for block in page.news_content %}
+          {% include_block block %}
+        {% endfor %}
 
         </div>
       </div>

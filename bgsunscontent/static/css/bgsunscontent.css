@@ -19,12 +19,9 @@ body {
 #borderforcontainer{
     /* border: 3px solid rgb(223,105,26); */
     border: 2px solid rgb(144, 26, 223);
-    
-
 }
 .navbar {
     height: 5vh;
-
 }
 
 .footer {
@@ -54,16 +51,30 @@ body {
 .article{
     background-color: rgba(0, 0, 0, 0.2);
     position: relative;
-    height: 75vh;
-    top: 15px;
+    height: 70vh;
+    top: 100px;
     right: 15px;
+    /* padding: 25px; */
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 #news-heading{
-    margin-top: 5px;
+    margin-top: 30px;
+    margin-bottom: 30px;
     text-align: center;
     font-size: 2rem;
 
+}
+
+.news-headline {
+    font-size: 1rem;
+    font-weight: 800;
+}
+
+.story {
+    font-size: 0.8rem;
+    font-weight: 500;
 }
 
 hr {

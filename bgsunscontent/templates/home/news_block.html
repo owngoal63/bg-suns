@@ -1,7 +1,7 @@
 {% load wagtailimages_tags %}
 
 
-<div class="container mb-sm-5 mt-sm-5">
+<!-- <div class="container mb-sm-5 mt-sm-5">
     <h2 class="text-center mb-sm-5">BG Suns</h2>
 
     <div class="card-deck">
@@ -16,5 +16,20 @@
             </div>
         {% endfor %}
     </div>
-</div>
+</div> -->
+
+<div class="col-12 col-md-4 offset-md-1 article">
+
+    <h1 id="news-heading">News</h1>
+    {% for news_item in self.news_items %}
+
+    <div class="news-item">
+      <h4 class="news-headline">{{ news_item.headline }}</h4>
+      <p class="story">{{ news_item.story }}</p>
+      <hr>
+
+    </div>
+    {% endfor %}
+    
+  </div>
     
