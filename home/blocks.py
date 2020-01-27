@@ -12,8 +12,8 @@ class NewsBlock(blocks.StructBlock):
     news_items = blocks.ListBlock(
         blocks.StructBlock(
             [
-                ("headline", blocks.TextBlock(required=True, max_length=100)),
-                ("story", blocks.CharBlock(required=False, max_length=400)),
+                ("headline", blocks.CharBlock(required=True, max_length=100)),
+                ("story", blocks.RichTextBlock(required=False, max_length=400)),
                 
             ]
         )

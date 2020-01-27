@@ -3,13 +3,12 @@
 {% load wagtailimages_tags %}
 
 {% block content %}
-    <div>
-        <h1>
-        {{ self.subtitle }}
-    </h1>
-    </div>
+
+<div class="container">
+
+    <h2 class="text-center" id="page-title">{{self.subtitle}}</h2>
     
-    <br>
+
 
     {% for block in page.content %}
         {% include_block block %}
@@ -26,5 +25,5 @@
         </tr>
     </table>
 
-
+</div>
 {% endblock %}

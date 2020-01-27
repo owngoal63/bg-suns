@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
 * {
     margin: 0px;
     padding: 0px;
@@ -6,6 +8,7 @@
 body {
     background-color: rgb(36, 35, 41);
     font-size: 16px;
+    color: #fff;
   }
 
 
@@ -16,12 +19,34 @@ body {
     height: 85vh;
 }
 
+.collapse {
+    z-index:2;
+    text-align:center;
+    position: relative;
+    left: -20px;
+}
+
+
+.nav-link:hover {
+    color:rgb(33, 31, 34) !important;
+}
+
+.navbar-nav{
+    width: 100vw;
+
+}
+
+
+.bg-primary{
+    background-color: rgb(223,105,26) !important;
+}
 #borderforcontainer{
     /* border: 3px solid rgb(223,105,26); */
     border: 2px solid rgb(144, 26, 223);
 }
 .navbar {
-    height: 5vh;
+    height: 7vh;
+    background-color: rgb(223,105,26) !important;
 }
 
 .footer {
@@ -31,6 +56,16 @@ body {
 
 }
 
+.fab{
+    color: rgb(223,105,26) !important;
+
+}
+
+.fab:hover{
+    color: rgb(202, 89, 14)!important;
+    text-decoration: none !important;
+
+}
 .carousel-inner{
     width:100%;
     max-height: 450px !important;
@@ -38,17 +73,36 @@ body {
 
 #bglogo {
     position: fixed;
-    top:0px;
-
+    top:5px;
+    left: 5px;
+    z-index:3;
+    height:107px;
+    width:102px;
 }  
 
 #headline {
     margin-top: 10%;
 }
 
+.center{
+    text-align: center;
+}
 
+
+
+.btn {
+    margin-top: 5px;
+    background-color: rgb(223,105,26) !important;
+    border: none;
+}
+
+.btn:hover{
+    background-color: rgb(202, 89, 14) !important;
+    cursor: pointer;
+}
 
 .article{
+    font-family: 'Montserrat', sans-serif;
     background-color: rgba(0, 0, 0, 0.2);
     position: relative;
     height: 70vh;
@@ -87,9 +141,9 @@ hr {
 }
 
 .btn-primary {
-    border-radius: 10%;
     margin-bottom: 5%;
 }
+
 
 
 
@@ -124,7 +178,6 @@ hr {
     font-style: oblique;
     color: grey;
 }
-
 
 .card-text{
     font-size: 12px;
@@ -204,13 +257,24 @@ hr {
 .containerx .box .details .content h2 {
     margin:0;
     padding: 0;
-    font-size: 20px;
-    color:#ff0;
+    font-size: 24px;
+    font-weight: 800;
+    /* color:#ff0; */
+    color:rgb(144, 26, 223);
 }
 
 .containerx .box .details .content h5 {
     margin:0;
     padding: 0;
-    font-size: 18px;
+    font-size: 20px;
+    color:#fff;
+}
+
+#page-title {
+    margin-top: 30px;
+}
+
+.player-card {
+    background-color: rgb(144, 26, 223) !important;
     color:#fff;
 }

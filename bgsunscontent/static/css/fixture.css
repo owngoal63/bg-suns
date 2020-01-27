@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 
-body {
-    background-image: url("/static/images/photo-of-basketball-on-floor.jpg"); 
+
+.fixture-container {
+    background-image:  linear-gradient( rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url("/static/images/photo-of-basketball-on-floor.jpg"); 
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    
+    height: 85vh;
 }
 
 .card {
@@ -215,7 +216,7 @@ h6 {
 }
 
 .text-center {
-    margin-top: 30px;
+    margin-top: 30px; 
     margin-bottom: 30px;
 }
 

@@ -49,7 +49,7 @@ body {
   /* background-image: url("https://www.bethq.com/sites/default/files/uploads/01-wembley-stadium.jpg"); */
   /* background-image: url("images/basketball-background.jpg");
   background-image: url("images/ball-basketball-basketball-court-basketball-hoop.jpg"); */
-  background-image: url("/static/images/photo-of-basketball-on-floor.jpg"); 
+  background-image: linear-gradient( rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("/static/images/photo-of-basketball-on-floor.jpg"); 
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -72,7 +72,7 @@ body {
   background-image: url("https://www.bethq.com/sites/default/files/uploads/01-wembley-stadium.jpg");
   background-image: url("images/basketball-background.jpg");
   background-image: url("images/ball-basketball-basketball-court-basketball-hoop.jpg"); */
-  background-image: url("/static/images/photo-of-basketball-on-floor.jpg");
+  background-image: linear-gradient( rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("/static/images/photo-of-basketball-on-floor.jpg");
   
   background-position: center;
   background-repeat: no-repeat;
