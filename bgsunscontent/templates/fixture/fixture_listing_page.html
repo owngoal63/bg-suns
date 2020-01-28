@@ -16,13 +16,21 @@
             {% for fixture in fixture_list %}
             {% image fixture.hometeam_image fill-80x80 as img1 %}
             {% image fixture.awayteam_image fill-80x80 as img2 %}
+            {% if fixture.fixture_status == "Result" %}
+                <a href="{{ fixture.url }}">
+            {% endif %}        
             <div class="card mb-3" style="min-width: 25rem; max-width: 25rem;">
-                <h4>{{ fixture.fixture_status }}</h4>
+                {% if fixture.fixture_status == "Result" %}
+                    <h4 id="result">{{ fixture.fixture_status }}</h4>
+                {% else %}
+                    <h4>{{ fixture.fixture_status }}</h4>
+                {% endif %}
+                <h6>{{ fixture.competition }}</h6>
                 <h6 class="date">{{ fixture.fixture_date_time }}</h6>
                 <div id="container">
                     <div class="match-details">
                         <div class="team1">
-                            <img src="{{ img1.url }}" alt="{{ img1.alt }}"/>
+                            <img src="{{ img1.url }}" alt="{{ img1.alt }}"/>{% if fixture.fixture_status == "Result" %}<h5><b>{{ fixture.HT_FT_PTS }}</b></h5>{% endif %}
                         </div>
                     </div> 
                     <div class="details">
@@ -32,7 +40,7 @@
                     
                     <div class="match-details">
                         <div class="team2">
-                            <img src="{{ img2.url }}" alt="{{ img2.alt }}"/>
+                            <img src="{{ img2.url }}" alt="{{ img2.alt }}"/>{% if fixture.fixture_status == "Result" %}<h5><b>{{ fixture.AT_FT_PTS }}</b></h5>{% endif %}
                         </div>
                     </div>
                 </div> 
@@ -52,6 +60,9 @@
                     </div>
                 </div> 
             </div>
+        {% if fixture.fixture_status == "Result" %}    
+            </a>
+        {% endif %}    
             {% endfor %}
         </div>
         <a class="btn btn-primary btn-sm" href="{% routablepageurl page 'leaguestats' %}" role="button">Track League Positions</a>

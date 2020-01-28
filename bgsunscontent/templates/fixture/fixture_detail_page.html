@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/result.css' %}">
+{% endblock %}
+
+{% load wagtailimages_tags wagtailcore_tags %}
+
+{% block content %}
+ 
+<div class="fixture-container">
+    <h2 class="text-center" id="page-title">Match Details</h2>
+    
+        <!-- <div class="card-deck"> -->
+
+            {% image self.hometeam_image fill-80x80 as img1 %}
+            {% image self.awayteam_image fill-80x80 as img2 %}
+      
+            <div class="card mb-3" style="min-width: 25rem; max-width: 45rem;">
+                {% if self.fixture_status == "Result" %}
+                    <h4 id="result">{{ self.fixture_status }}</h4>
+                {% else %}
+                    <h4>{{ self.fixture_status }}</h4>
+                {% endif %}
+                <h6>{{ self.competition }}</h6>
+                <h6 class="date">{{ self.fixture_date_time }}</h6>
+                <h6 class="venue">{{ self.fixture_location }}</h6>
+                <div id="container">
+                    <div class="match-details">
+                        <div class="team1">
+                            <img src="{{ img1.url }}" alt="{{ img1.alt }}"/><h5><b>{{ self.HT_FT_PTS }}</b></h5>
+                            <h6 class="scorers">
+                                {{ self.Home_Team_Scorers|richtext }}
+                            </h6>
+                        </div>
+                    </div> 
+                    <div class="details">
+                        <h6 class="versus">VS</h6>
+                        <h6 id="ht">Half Time</h6>
+                        <h6 id="ht">{{ self.HT_HT_PTS }}    -    {{ self.AT_HT_PTS }}</h6>
+                        <h6 id="officials">{{ self.Match_Officials|richtext }}</h6>
+                    </div>   
+                    
+                    <div class="match-details">
+                        <div class="team2">
+                            <img src="{{ img2.url }}" alt="{{ img2.alt }}"/><h5><b>{{ self.AT_FT_PTS }}</b></h5>
+                            <h6 class="scorers">
+                                {{ self.Away_Team_Scorers|richtext }}
+                            </h6>
+                        </div>
+                    </div>
+                </div> 
+                <div id="containerx">
+                    <div class="team-names">
+                        <div class="match-detailsx">
+                            <div class="team1x">
+                                <h6 class="team_name">{{ self.hometeam }}</h6>
+                            </div>
+                        </div> 
+                        
+                        <div class="match-detailsx">
+                            <div class="team2x">
+                                <h6 class="team_name">{{ self.awayteam }}</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+
+            <a href="/fixture/" class="btn btn-primary">
+                Return to fixture list
+            </a>
+
+        </div>   
+    </div>
+    
+   
+    </div>
+{% endblock %}
