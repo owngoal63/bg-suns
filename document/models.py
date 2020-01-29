@@ -23,7 +23,10 @@ class DocumentList(Orderable):
 class DocumentPage(Page):
     
     templates = "document/document_page.html"
-    max_count = 1
+    subpage_types=[]
+
+    ''' Allow for 2 pages maximum - One for regular text documents and one for Videos '''
+    max_count = 2
 
     document_page_title = models.CharField(max_length=250, blank=False, null=True)
     document_page_description = RichTextField(features=["bold", "italic"], blank=False, null=True)

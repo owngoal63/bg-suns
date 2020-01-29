@@ -17,6 +17,8 @@ class FixtureListingPage(RoutablePageMixin, Page):
 	"""Listing page lists all the Fixture Detail Pages."""
 
 	template = "fixture/fixture_listing_page.html"
+	subpage_types = ['fixture.FixtureDetailPage']
+	max_count = 1
 
 	custom_title = models.CharField(
 		max_length=100,
@@ -43,6 +45,8 @@ class FixtureListingPage(RoutablePageMixin, Page):
 
 class FixtureDetailPage(Page):
 	"""Fixture detail page."""
+
+	subpage_types=[]
 
 	competition = models.CharField(
 		max_length=100,

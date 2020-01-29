@@ -37,6 +37,11 @@ class HomePage(Page):
     """Home page model"""
 
     templates = "home/home_page.html"
+    subpage_types = [
+        # 'player.PlayerDetailPage',
+        # 'fixture.FixtureDetailPage',
+        'document.DocumentPage',
+        'contact.ContactPage']
     max_count = 1
 
     banner_title = models.CharField(max_length=100, blank=False, null=True)

@@ -28,7 +28,6 @@ INSTALLED_APPS = [
     'search',
     'flex',
     'streams',
-    'team',
     'player',
     'fixture',
     'document',

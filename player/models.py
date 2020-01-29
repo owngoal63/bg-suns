@@ -15,6 +15,8 @@ class PlayerListingPage(RoutablePageMixin, Page):
 	"""Listing page lists all the Player Detail Pages."""
 
 	template = "player/player_listing_page.html"
+	subpage_types = ['player.PlayerDetailPage']
+	max_count = 1
 
 	custom_title = models.CharField(
 		max_length=100,
@@ -46,6 +48,8 @@ class PlayerListingPage(RoutablePageMixin, Page):
 
 class PlayerDetailPage(Page):
 	"""Player detail page."""
+
+	subpage_types=[]
 
 	name = models.CharField(
 		max_length=200,

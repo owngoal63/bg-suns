@@ -10,6 +10,7 @@ from streams import blocks
 
 class FlexPage(Page):
 	"""Flexibile page class."""
+	subpage_types=[]
 
 	template = "flex/flex_page.html"
 
