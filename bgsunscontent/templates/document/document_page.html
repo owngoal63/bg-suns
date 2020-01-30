@@ -23,7 +23,18 @@
                   </div>
               {% endfor %}
           </div>
-      
-</div>  
+
+{% if self.video_link_section_title %}          
+    <hr>          
+
+    <h2 class="text-center" id="page-title">{{self.video_link_section_title}}</h2>
+{% endif %}    
+
+
+</div> 
+
+{% for block in page.video_link_content %}
+    {% include_block block %}
+{% endfor %}
 
 {% endblock %}
