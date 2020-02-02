@@ -115,7 +115,7 @@ class FixtureDetailPage(Page):
 	Away_Team_Scorers = RichTextField(features=["bold", "italic"], null=True, blank=True)
 
 	Match_Officials = RichTextField(features=["bold", "italic"],null=True, blank=True)
-	Match_Report = RichTextField(features=["bold", "italic"],null=True, blank=True)
+	Match_Report = RichTextField(features=["bold", "italic", "link"],null=True, blank=True)
 
 	content_panels = Page.content_panels + [
 		FieldPanel("competition"),
