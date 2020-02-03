@@ -90,7 +90,7 @@ class HomePage(Page):
             heading="Banner Options",
         ),
         MultiFieldPanel(
-            [InlinePanel("carousel_images", max_num=5, min_num=1, label="Image")],
+            [InlinePanel("carousel_images", max_num=10, min_num=1, label="Image")],
             heading="Carousel Images",
         ),
         StreamFieldPanel("news_content"),
