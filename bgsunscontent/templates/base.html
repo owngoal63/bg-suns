@@ -70,6 +70,16 @@
                 <li class="nav-item">
                   <a class="nav-link" href="/contact-form">Shop Now</a>
                 </li>
+                <div class="dropdown">
+                  <button class="dropbtn">Dropdown 
+                    <i class="fa fa-caret-down"></i>
+                  </button>
+                  <div class="dropdown-content">
+                    <a href="/contact-form">Link 1</a>
+                    <a href="/contact-form">Link 2</a>
+                    <a href="/contact-form">Link 3</a>
+                  </div>
+                </div> 
               </ul>
             </div>
           </nav>
@@ -79,20 +89,26 @@
         <div class="container-fluid footer">
           <div class="row">
               <div class="col-lg-12 text-center">
+                  {% if settings.social_media_settings.SocialMediaSettings.instagram %}
+                      <a href="{{ settings.social_media_settings.SocialMediaSettings.instagram }}" target="_blank">
+                          <i class="fab fa-instagram fa-2x"></i>
+                      </a>
+                  {% endif %}
+                  &nbsp;&nbsp;
                   {% if settings.social_media_settings.SocialMediaSettings.facebook %}
-                      <a href="{{ settings.social_media_settings.SocialMediaSettings.facebook }}">
+                      <a href="{{ settings.social_media_settings.SocialMediaSettings.facebook }}" target="_blank">
                           <i class="fab fa-facebook-square fa-2x"></i>
                       </a>
                   {% endif %}
                   &nbsp;&nbsp;
                   {% if settings.social_media_settings.SocialMediaSettings.twitter %}
-                      <a href="{{ settings.social_media_settings.SocialMediaSettings.twitter }}">
+                      <a href="{{ settings.social_media_settings.SocialMediaSettings.twitter }}" target="_blank">
                           <i class="fab fa-twitter fa-2x"></i>
                       </a>
                   {% endif %}
                   &nbsp;&nbsp;
                   {% if settings.social_media_settings.SocialMediaSettings.youtube %}
-                      <a href="{{ settings.social_media_settings.SocialMediaSettings.youtube }}">
+                      <a href="{{ settings.social_media_settings.SocialMediaSettings.youtube }}" target="_blank">
                           <i class="fab fa-youtube fa-2x"></i>
                       </a>
                   {% endif %}
