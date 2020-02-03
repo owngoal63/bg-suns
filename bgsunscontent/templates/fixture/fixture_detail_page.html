@@ -37,8 +37,10 @@
                     </div> 
                     <div class="details">
                         <h6 class="versus">VS</h6>
+                        {% if self.HT_HT_PTS %}
                         <h6 id="ht">Half Time</h6>
                         <h6 id="ht">{{ self.HT_HT_PTS }}    -    {{ self.AT_HT_PTS }}</h6>
+                        {% endif %}
                         <h6 id="officials">{{ self.Match_Officials|richtext }}</h6>
                     </div>   
                     
