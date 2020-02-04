@@ -49,6 +49,25 @@ body {
     background-color: rgb(223,105,26) !important;
 }
 
+
+/* CSS section for Horizontal Photo Gallery */
+.testimonial-group > .row {
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  .testimonial-group > .row > .col-sm-4 {
+    display: inline-block;
+    float: none;
+  }
+  
+  /* Decorations */
+  .col-sm-4 { color: #fff; font-size: 48px; padding-bottom: 20px; padding-top: 18px; }
+  .col-sm-4:nth-child(2n+1) { background: linear-gradient(to bottom right,rgb(80,34,123), black) }
+  .col-sm-4:nth-child(2n+2) { background: linear-gradient(to bottom right, rgb(80,34,123), black) }
+  /* .col-sm-4:nth-child(3n+3) { background: #000; } */
+
+/* Photo Gallery CSS section end */
+
 .footer {
     height: 10vh;
     padding-top: 30px;

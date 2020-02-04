@@ -5,7 +5,11 @@
 {% block content %}
 
 
+
+
 <div class="container">
+
+    {% if self.document_page_title == "Documents and Forms" %}
     
     <h2 class="text-center" id="page-title">{{self.document_page_title}}</h2>
 
@@ -24,11 +28,26 @@
               {% endfor %}
           </div>
 
-{% if self.video_link_section_title %}          
-    <hr>          
+    {% else %}    
+    <!-- Display Photo Gallery from BG Suns Photos and Videos  -->
 
+    <h2 class="text-center" id="page-title">{{self.document_page_title}}</h2>
+
+    {{ self.document_page_description|richtext }}
+
+    <div class="container testimonial-group">
+        <div class="row text-center flex-nowrap">
+            {% for document in self.related_documents.all %}
+                <div class="col-sm-4"><img src="{{document.related_document.url}}" class="img-thumbnail" alt="Cinque Terre" width="304" height="236"></div>
+          {% endfor %}
+        </div>
+      </div>
+    {% endif %}
+
+{% if self.video_link_section_title %}                 
     <h2 class="text-center" id="page-title">{{self.video_link_section_title}}</h2>
 {% endif %}    
+
 
 
 </div> 
@@ -36,5 +55,7 @@
 {% for block in page.video_link_content %}
     {% include_block block %}
 {% endfor %}
+
+
 
 {% endblock %}

@@ -30,7 +30,7 @@ class DocumentPage(Page):
     ''' Allow for 2 pages maximum - One for regular text documents and one for Videos '''
     max_count = 2
 
-    document_page_title = models.CharField(max_length=250, blank=False, null=True)
+    document_page_title = models.CharField(max_length=250, blank=False, null=True, help_text="Call this 'Documents and Forms' for the document Page for logic to work")
     document_page_description = RichTextField(features=["bold", "italic"], blank=False, null=True)
 
     video_link_section_title = models.CharField(max_length=400, blank=True, null=True, help_text='Add a title for the video link section')
@@ -52,5 +52,7 @@ class DocumentPage(Page):
         StreamFieldPanel("video_link_content"),
     ]    
 
+
+   
 
    
