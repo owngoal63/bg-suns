@@ -292,7 +292,7 @@ hr {
 }
 
 .player-card {
-    background-color: rgb(144, 26, 223) !important;
+    background: linear-gradient(to bottom right,rgb(80,34,123), black) !important;
     color:#fff;
 }
 
