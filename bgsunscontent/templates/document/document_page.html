@@ -36,19 +36,26 @@
     {{ self.document_page_description|richtext }}
 
     <div class="container testimonial-group">
-        <div class="row text-center flex-nowrap">
+        <div class="row text-center flex-nowrap popup">
             {% for document in self.related_documents.all %}
-                <div class="col-sm-4"><img src="{{document.related_document.url}}" class="img-thumbnail" alt="Cinque Terre" width="304" height="236"></div>
+                <div class="col-sm-4"><img src="{{document.related_document.url}}" class="img-thumbnail" alt="{{ document.related_document.title }}" width="304" height="236"></div>
           {% endfor %}
         </div>
       </div>
     {% endif %}
 
+    <div class="show">
+        <div class="overlay"></div>
+        <div class="img-show">
+          <span>X</span>
+          <img src="">
+          <div id="caption"></div>
+        </div>
+      </div>
+
 {% if self.video_link_section_title %}                 
     <h2 class="text-center" id="page-title">{{self.video_link_section_title}}</h2>
 {% endif %}    
-
-
 
 </div> 
 
@@ -57,5 +64,29 @@
 {% endfor %}
 
 
+{% endblock %}
+
+{% block extra_js %}
+            
+<script>
+ $(function () {
+    "use strict";
+    //var captionText = document.getElementById("caption");
+    
+    $(".popup img").click(function () {
+        var $src = $(this).attr("src");
+        $(".show").fadeIn();
+        $(".img-show img").attr("src", $src);
+        $("#caption").text($(this).attr("alt"));
+        
+    });
+    
+    $("span, .overlay").click(function () {
+        $(".show").fadeOut();
+    });
+    
+});
+</script>
 
 {% endblock %}
+
