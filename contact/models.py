@@ -79,7 +79,7 @@ class ContactPage(AbstractEmailForm):
             #html_content='<strong>and easy to do anywhere, even with Python</strong>')
             html_content=xmessage)
         try:
-            sg = SendGridAPIClient('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')
+            sg = SendxGridxAPIxClient('xxxxx')
             response = sg.send(message)
             print(response.status_code)
             print(response.body)
