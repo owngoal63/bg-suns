@@ -42,9 +42,9 @@
           
             <div class="collapse navbar-collapse bg-primary" id="navbarColor01">
               <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
+                <!-- <li class="nav-item active">
                   <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-                </li>
+                </li> -->
                 <li class="nav-item">
                   <a class="nav-link" href="/player">Players</a>
                 </li>
@@ -77,11 +77,12 @@
             </div>
           </nav>
 
+        <section>  
         {% block content %}{% endblock %}
-
-        <div class="container-fluid footer">
+          
+        <!-- <div class="container-fluid footer"> -->
           <div class="row">
-              <div class="col-lg-12 text-center">
+              <div class="col-lg-12 text-center footer">
                   {% if settings.social_media_settings.SocialMediaSettings.instagram %}
                       <a href="{{ settings.social_media_settings.SocialMediaSettings.instagram }}" target="_blank">
                           <i class="fab fa-instagram fa-2x"></i>
@@ -107,8 +108,8 @@
                   {% endif %}
               </div>
           </div>
-      </div>
-
+      </div>  <!-- Close container div -->
+    </section>
 
         {# Global javascript #}
         <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script> -->

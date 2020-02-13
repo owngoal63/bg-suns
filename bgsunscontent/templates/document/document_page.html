@@ -2,22 +2,22 @@
 {% load static %}
 
 {% block extra_css %}
-<link rel="stylesheet" type="text/css" href="{% static 'css/galleryandpopup.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/document.css' %}">
 {% endblock %}
 
 {% load wagtailcore_tags %}
 
 {% block content %}
 
+{% if self.document_page_title == "Documents and Forms" %}
+<div class="container-fluid"
+    style="background-image: linear-gradient( rgba(80,34,123,0.8), rgba(80,34,123,0.8)), url('{% static 'images/brown-basketball-on-grey-floor.jpg' %}'); background-size:cover; color: #fff; height: 100vh; ">
 
-<div class="container">
-
-    {% if self.document_page_title == "Documents and Forms" %}
     
+    <div class="col-12 center">
     <h2 class="text-center" id="page-title">{{self.document_page_title}}</h2>
-
-    {{ self.document_page_description|richtext }}
-
+    
+    <h5 id="page-subtitle">{{ self.document_page_description|richtext }}</h5>
 
       {# Example of an Orderable from home/models.py #}
       
@@ -25,18 +25,22 @@
               {% for document in self.related_documents.all %}
                   <div class="document-item{% if forloop.counter == 1 %} active{% endif %}">
                     <div class="container"> 
-                        <a href="{{ document.related_document.url }}" target="_blank">{{ document.related_document.title }}</a>
+                        <h6><a href="{{ document.related_document.url }}" target="_blank">&nbsp;<i class="fas fa-file"></i>&nbsp;{{ document.related_document.title }}&nbsp;</h6></a>
                     </div>  
                   </div>
               {% endfor %}
           </div>
-
+        </div>
+    
     {% else %}    
     <!-- Display Photo Gallery from BG Suns Photos and Videos  -->
-
+    <div class="container-fluid"
+    style="background-image: linear-gradient( rgba(80,34,123,0.8), rgba(80,34,123,0.8)), url('{% static 'images/brown-basketball-on-grey-floor.jpg' %}'); background-size:cover; color: #fff; background-repeat: repeat; ">
+    
+    <div class="col-12 center">
     <h2 class="text-center" id="page-title">{{self.document_page_title}}</h2>
 
-    {{ self.document_page_description|richtext }}
+    <h5 id="page-subtitle">{{ self.document_page_description|richtext }}</h5>
 
     <div class="container testimonial-group">
         <div class="row text-center flex-nowrap popup">
@@ -45,8 +49,10 @@
           {% endfor %}
         </div>
       </div>
+    <!-- </div>   -->
     {% endif %}
 
+    
     <div class="show">
         <div class="overlay"></div>
         <div class="img-show">
@@ -56,16 +62,17 @@
         </div>
       </div>
 
+<!-- <div class="col-12"> -->
 {% if self.video_link_section_title %}                 
     <h2 class="text-center" id="page-title">{{self.video_link_section_title}}</h2>
 {% endif %}    
 
-</div> 
 
 {% for block in page.video_link_content %}
-    {% include_block block %}
+{% include_block block %}
 {% endfor %}
 
+<!-- </div> This div is closed out in base.html ( See Close container div) -->
 
 {% endblock %}
 

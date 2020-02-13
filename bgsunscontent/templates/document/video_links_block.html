@@ -1,23 +1,12 @@
 {% load wagtailimages_tags %}
 
+<div class="document-inner">
+  {% for video_link_item in self.video_links %}
+  <div class="document-item{% if forloop.counter == 1 %} active{% endif %}">
+    <iframe width="320" height="215" src="{{ video_link_item.video_link_url }}" frameborder="0"
+      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    {{ video_link_item.video_link_name }}
 
-
-<div class="container">
-    
-    <!-- <h2 class="text-center" id="page-title">{{self.video_link_section_title}}</h2> -->
-
-      
-          <div class="document-inner">
-            {% for video_link_item in self.video_links %}
-                  <div class="document-item{% if forloop.counter == 1 %} active{% endif %}">
-                    <div class="container"> 
-                        <!-- <a href="{{ video_link_item.video_link_url }}" target="_blank">{{ video_link_item.video_link_name }}</a> -->
-                        <!-- <iframe width="320" height="215"src="{{ video_link_item.video_link_url }}"></iframe> -->
-                        <iframe width="320" height="215" src="{{ video_link_item.video_link_url }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        {{ video_link_item.video_link_name }}
-                    </div>  
-                  </div>
-              {% endfor %}
-          </div>
-      
-</div> 
+  </div>
+  {% endfor %}
+</div>

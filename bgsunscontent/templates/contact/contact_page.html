@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 {% load wagtailcore_tags %}
 
 {% block content %}
@@ -18,11 +19,19 @@
         .contact-form .helptext {
             display: block;
             font-size: 80%;
+        }    
+        .contact-title  {
+            text-align: left;
+            margin-top:60px;
+    
         }
     </style>
 
-    <div class="container mt-5 mb-5">
-        <h1>{{ page.title }}</h1>
+    <!-- <div class="container mt-5 mb-5"> -->
+        <div class="container-fluid"
+        style="background-image: linear-gradient( rgba(80,34,123,0.8), rgba(80,34,123,0.8)), url('{% static 'images/brown-basketball-on-grey-floor.jpg' %}'); background-size:cover; color: #fff; height: 100vh; ">
+        <div class="col-12">
+        <h1 class="contact-title">{{ page.title }}</h1>
         <p>
             {{ self.intro|richtext }}
         </p>
@@ -35,5 +44,6 @@
             <button type="submit" class="btn btn-primary">Submit Form</button>
         </form>
     </div>
+    <!-- </div> This div is closed out in base.html ( See Close container div) -->
 
 {% endblock %}

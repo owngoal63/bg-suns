@@ -9,7 +9,8 @@
 
 {% block content %}
 
-<div class="fixture-container">
+<div class="container-fluid"
+    style="background-image: linear-gradient( rgba(80,34,123,0.8), rgba(80,34,123,0.8)), url('{% static 'images/brown-basketball-on-grey-floor.jpg' %}'); background-size:cover; color: #fff; height: 100vh; ">
     <h2 class="text-center" id="page-title">{{self.custom_title}}</h2>
     
         <div class="card-deck">
@@ -25,7 +26,7 @@
                 {% else %}
                     <h4>{{ fixture.fixture_status }}</h4>
                 {% endif %}
-                <h6>{{ fixture.competition }}</h6>
+                <h6 class="competition">{{ fixture.competition }}</h6>
                 <h6 class="date">{{ fixture.fixture_date_time }}</h6>
                 <div id="container">
                     <div class="match-details">
@@ -66,7 +67,7 @@
             {% endfor %}
         </div>
         <a class="btn btn-primary btn-sm" href="{% routablepageurl page 'leaguestats' %}" role="button">Track League Positions</a>
-</div>
+<!-- </div> This div is closed out in base.html ( See Close container div) -->
 
 
 

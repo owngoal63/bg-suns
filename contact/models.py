@@ -72,17 +72,17 @@ class ContactPage(AbstractEmailForm):
             #print(field.value())
 
 
-        message = Mail(
-            from_email='from_email@example.com',
-            to_emails='gordonlindsay@virginmedia.com',
-            subject='Message from BG Suns Website',
-            #html_content='<strong>and easy to do anywhere, even with Python</strong>')
-            html_content=xmessage)
-        try:
-            sg = SendxGridxAPIxClient('xxxxx')
-            response = sg.send(message)
-            print(response.status_code)
-            print(response.body)
-            print(response.headers)
-        except Exception as e:
-            print(e.message)
+        # message = Mail(
+        #     from_email='from_email@example.com',
+        #     to_emails='gordonlindsay@virginmedia.com',
+        #     subject='Message from BG Suns Website',
+        #     #html_content='<strong>and easy to do anywhere, even with Python</strong>')
+        #     html_content=xmessage)
+        # try:
+        #     sg = SendxGridxAPIxClient('xxxxx')
+        #     response = sg.send(message)
+        #     print(response.status_code)
+        #     print(response.body)
+        #     print(response.headers)
+        # except Exception as e:
+        #     print(e.message)

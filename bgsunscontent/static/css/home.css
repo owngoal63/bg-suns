@@ -1,0 +1,51 @@
+/* Styles for Carousel */
+#borderforcarousel{
+    /* border: 3px solid rgb(223,105,26); */
+    border: 2px solid #fff;
+}
+
+.carousel-inner{
+    width:100%;
+    max-height: 450px !important;
+}
+
+/* News Section Styles */
+.article{
+    /* font-family: 'Montserrat', sans-serif; */
+    background-color: rgba(0, 0, 0, 0.2);
+    position: relative;
+    height: 540px;
+    top: 100px;
+    right: 15px;
+    /* padding: 25px; */
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+#news-heading{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 1.5rem;
+
+}
+
+.news-headline {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.story {
+    font-size: 0.3em;
+    font-weight: 300;
+}
+
+
+/* Home Page Main Text Styles */
+#headline {
+    margin-top: 30px;
+}
+
+.subtitle {
+    margin-left: 4%;
+}

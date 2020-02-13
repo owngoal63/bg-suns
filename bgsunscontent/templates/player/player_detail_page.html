@@ -1,51 +1,46 @@
 {% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+  <link rel="stylesheet" type="text/css" href="{% static 'css/player.css' %}">
+{% endblock %}
 
 {% load wagtailimages_tags wagtailcore_tags %}
 
 {% block content %}
-    {% image self.player_image fill-350x350 as img %}
-    
-    <!-- <div class="container mt-5 mb-5">
-        <div class="text-center">
-            <img src="{{ img.url }}" alt="{{ banner.alt }}" style='width: 10%; height: auto;'>
-            <h5>{{ self.name }}</h5>
-            <h5>{{ self.nickname }}</h5>
-            <h5>{{ self.position }}</h5>
-            <h5>{{ self.age }}</h5>
-            <h5>{{ self.height }}</h5>
-            <h5>{{ self.occupation }}</h5>
-            <h5>{{ self.playing_style }}</h5>
-            <a href="/player/" class="btn btn-primary">
-                Return to team list
-            </a>
-        </div>
-    </div> -->
+{% image self.player_image fill-350x350 as img %}
 
 
-    <div class="container">
+<div class="container-fluid"
+    style="background-image: linear-gradient( rgba(80,34,123,0.8), rgba(80,34,123,0.8)), url('{% static 'images/brown-basketball-on-grey-floor.jpg' %}'); background-size:cover; color: #fff; height: 100vh; ">
+
+    <h2 class="text-center mb-sm-5" id="page-title">{{self.name}}</h2>
+
     <div class="text-center">
-    <div class="containerx">
-        <div class="box">
-            <div class="imgBox">
-                <img src="{{ img.url }}"> 
-            </div>
-            <div class="details">
-                <div class="content">
-                    <h2 class="player-name">{{ self.name }}</h2>
-                    <h2><i>{{ self.nickname }}</i></h2>
-                    <br>
-                    <h5>Position: {{ self.position }}</h5>
-                    <h5>Age: {{ self.age }}</h5>
-                    <h5>Height: {{ self.height }}</h5>
-                    <h5>Occupation: {{ self.occupation }}</h5>
-                    <h5>Playing Style: {{ self.playing_style }}</h5>
+        <div class="containerx">
+            <div class="box">
+                <div class="imgBox">
+                    <img src="{{ img.url }}">
+                </div>
+                <div class="details">
+                    <div class="content">
+                        <!-- <h2 class="player-name">{{ self.name }}</h2> -->
+                        <h2><i>"{{ self.nickname }}"</i></h2>
+                        <br>
+                        <h5>Position: {{ self.position }}</h5>
+                        <h5>Age: {{ self.age }}</h5>
+                        <h5>Height: {{ self.height }}</h5>
+                        <h5>Occupation: {{ self.occupation }}</h5>
+                        <h5>Playing Style: {{ self.playing_style }}</h5>
+                    </div>
                 </div>
             </div>
         </div>
+
+        <a href="/player/" class="btn btn-primary">
+            Return to team list
+        </a>
     </div>
-    <a href="/player/" class="btn btn-primary">
-        Return to team list
-    </a>
-    </div>
-    </div>
+ <!-- </div> This div is closed out in base.html ( See Close container div) -->
+
 {% endblock %}

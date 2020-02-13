@@ -48,7 +48,7 @@ if (isChrome) {
     
     var imagePosx = 5                       // Image Position offset from edge of bar (px)
     
-    var textOffsetx = 50                    // Text Position offset from edge of bar (px)
+    var textOffsetx = 45                    // Text Position offset from edge of bar (px)
     var textOffsety = 5                     // Text Position offset from top of bar (px)
     
     var textAnchor = "left"                 // Text Anchor attribute
@@ -249,7 +249,7 @@ if (isChrome) {
             .append('select')
             .attr('class', 'select')
             .attr('multiple', '')
-            .attr("size", "20")
+            .attr("size", "7")
             .on('change', function(d) {
                 var s = teamOptions.filter(function(d) {
                     return this.selected;

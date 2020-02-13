@@ -9,7 +9,8 @@
 
 {% block content %}
  
-<div class="fixture-container">
+<div class="container-fluid center-card"
+    style="background-image: linear-gradient( rgba(80,34,123,0.8), rgba(80,34,123,0.8)), url('{% static 'images/brown-basketball-on-grey-floor.jpg' %}'); background-size:cover; color: #fff; height: 100vh; ">
     <h2 class="text-center" id="page-title">Match Details</h2>
     
         <!-- <div class="card-deck"> -->
@@ -17,13 +18,15 @@
             {% image self.hometeam_image fill-80x80 as img1 %}
             {% image self.awayteam_image fill-80x80 as img2 %}
       
+            <div class="row justify-content-center">
+
             <div class="card mb-3" style="min-width: 25rem; max-width: 45rem;">
                 {% if self.fixture_status == "Result" %}
                     <h4 id="result">{{ self.fixture_status }}</h4>
                 {% else %}
                     <h4>{{ self.fixture_status }}</h4>
                 {% endif %}
-                <h6>{{ self.competition }}</h6>
+                <h6 class="competition">{{ self.competition }}</h6>
                 <h6 class="date">{{ self.fixture_date_time }}</h6>
                 <h6 class="venue">{{ self.fixture_location }}</h6>
                 <div id="container">
@@ -74,14 +77,13 @@
 
                 </div> 
             </div>
-
+            </div>
+            <div class="row justify-content-center">
             <a href="/fixture/" class="btn btn-primary">
                 Return to fixture list
             </a>
+        </div>
+        <!-- </div> -->
+       <!-- </div> This div is closed out in base.html ( See Close container div) --> 
 
-        </div>   
-    </div>
-    
-   
-    </div>
 {% endblock %}

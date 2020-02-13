@@ -2,25 +2,27 @@
 {% load static %}
 
 {% block extra_css %}
-<link rel="stylesheet" type="text/css" href="{% static 'css/scorerstats.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/scorerstats.css' %}">
 {% endblock %}
 
 {% block content %}
+
+<div class="container-fluid"
+style="background-image: linear-gradient( rgba(80,34,123,0.8), rgba(80,34,123,0.8)), url('{% static 'images/brown-basketball-on-grey-floor.jpg' %}'); background-size:cover; color: #fff; height: 100vh; ">
+<div class="col-12 center">
 
 <div class="header">
 
     <h1 id="text">BG Suns 2018/19 Top Scorer Tracker</h1>
     Currently displaying&nbsp;<button class="weekbutton" id="weekBtn">-</button>&nbsp;Click to move forward.
 </div>
-
-<div class="container-fluid">
    
     <div class="row no-gutters">
       <div class="col-sm-1">
         <div id="team-selector" class="team-selector"></div>
 
-<button id="SelectBtn" class="teamsbutton">Select Players</button>
-<p class="infotext">Press the Ctrl key (Windows) <br> Command (Mac) key to <br>select multiple players.(Max 5)</p>
+<button id="SelectBtn" class="btn btn-primary btn-sm teamsbutton">Select Players</button>
+<p class="infotext">Press the Ctrl key and click<br>to select multiple players. (Max 3)</p>
       </div>
       <div class="col-sm-11">
         <div id="svgContainer" class="graph-container">
@@ -28,11 +30,12 @@
         </div>
       </div>
     </div>
-  </div>
+  <!-- </div> -->
 
 <br>
 <div class="userInstructions">
 <p class="weeklyImprovement">Watch this space for weekly changes to player positions......</p>
+</div>
 </div>
 
 {% endblock %}

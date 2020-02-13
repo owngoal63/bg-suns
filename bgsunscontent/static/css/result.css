@@ -1,16 +1,20 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat');
+/* @import url('https://fonts.googleapis.com/css?family=Montserrat'); */
 
 
-.fixture-container {
+/* .fixture-container {
     background-image:  linear-gradient( rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url("/static/images/photo-of-basketball-on-floor.jpg"); 
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 85vh;
-}
+} */
+
+/* .center-card {
+    align-content: center !important;
+} */
 
 .card {
-    font-family: 'Montserrat', sans-serif;
+    /* font-family: 'Montserrat', sans-serif; */
     /* position: absolute;
     top: 50%;
     left: 50%;
@@ -220,6 +224,7 @@ h6 {
 }
 
 .date {
+    text-align: center;
     margin-top: 2%;
 }
 
@@ -227,7 +232,13 @@ h6 {
     text-decoration: none;
 }
 
+.competition {
+    text-align: center;
+    margin-top: 2px;
+}
+
 .venue {
+    text-align: center;
     margin-bottom: 0%;
 }
 
