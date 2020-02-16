@@ -2,15 +2,50 @@
 from django.db import models
 from django.shortcuts import render
 
-from wagtail.admin.edit_handlers import FieldPanel, StreamFieldPanel, FieldRowPanel
+from wagtail.admin.edit_handlers import FieldPanel, StreamFieldPanel, FieldRowPanel, MultiFieldPanel, InlinePanel
 from wagtail.core.fields import RichTextField
 from wagtail.core.fields import StreamField
-from wagtail.core.models import Page
+from wagtail.core.models import Page, Orderable
 from wagtail.images.edit_handlers import ImageChooserPanel
+from wagtail.snippets.edit_handlers import SnippetChooserPanel
 from wagtail.contrib.routable_page.models import RoutablePageMixin, route
 from wagtail.core import blocks
+from wagtail.snippets.models import register_snippet
+from modelcluster.fields import ParentalKey
 
-#from streams import blocks
+
+class FixtureStatusOrderable(Orderable):
+	""" Select Fixture Status from Snippet Fixture Status """
+
+	page = ParentalKey("fixture.FixtureDetailPage", related_name="fixture_status_selector")
+	status = models.ForeignKey(
+		"fixture.FixtureStatus",
+		on_delete=models.CASCADE
+	)
+
+	panels = [
+		SnippetChooserPanel("status")
+	]
+
+
+
+class FixtureStatus(models.Model):
+	""" Snippet to limited status for Match """
+	fixture_status = models.CharField(max_length=100)
+	#fixture_video_url = models.URLField(blank=True, null=True)
+
+	panels = [
+		FieldPanel("fixture_status")
+	]
+
+	def __str__(self):
+		return self.fixture_status
+
+	class Meta:
+		verbose_name = "Fixture Status"
+		verbose_name_plural = "Fixture Statuses"
+
+register_snippet(FixtureStatus)		
 
 
 class FixtureListingPage(RoutablePageMixin, Page):
@@ -99,11 +134,10 @@ class FixtureDetailPage(Page):
 		help_text='Fixture location',
 	)
 
-	fixture_status = models.CharField(
-		max_length=100,
-		blank=False,
-		null=False,
-		help_text='Fixture status- set to either Upcoming Match or Result',
+	fixture_video = models.URLField(
+		blank=True,
+		null=True,
+		help_text='Enter the url link to the match video. (optional)',
 	)
 
 	HT_FT_PTS = models.IntegerField(null=True, blank=True)
@@ -125,7 +159,13 @@ class FixtureDetailPage(Page):
 		ImageChooserPanel("awayteam_image"),
 		FieldPanel("fixture_date_time"),
 		FieldPanel("fixture_location"),
-		FieldPanel("fixture_status"),
+		MultiFieldPanel(
+			[
+				InlinePanel("fixture_status_selector", label="Fixture Status", min_num=1, max_num=1)
+			],
+			heading="Fixture Status"
+		),
+		FieldPanel("fixture_video"),
 		FieldRowPanel(
 			[
 				FieldPanel("HT_FT_PTS"),

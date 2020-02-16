@@ -272,3 +272,15 @@ a:hover {
     text-align: center;
     font-size: 14px; 
 }
+
+/* Video Icon */
+.fas{
+    color: rgb(223,105,26) !important;
+
+}
+
+.fas:hover{
+    color: rgb(202, 89, 14)!important;
+    text-decoration: none !important;
+
+}
