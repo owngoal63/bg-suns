@@ -33,7 +33,9 @@ class DocumentPage(Page):
     document_page_title = models.CharField(max_length=250, blank=False, null=True, help_text="Call this 'Documents and Forms' for the document Page for logic to work")
     document_page_description = RichTextField(features=["bold", "italic"], blank=False, null=True)
 
-    video_link_section_title = models.CharField(max_length=400, blank=True, null=True, help_text='Add a title for the video link section')
+    video_channel_section_title = models.CharField(max_length=400, blank=True, null=True, help_text='Add a title for the GB Suns video channel section')
+
+    video_link_section_title = models.CharField(max_length=400, blank=True, null=True, help_text='Add a title for the other videos section')
 
     video_link_content = StreamField(
 		[
@@ -48,6 +50,7 @@ class DocumentPage(Page):
         FieldPanel("document_page_title"),
         FieldPanel("document_page_description"),
         InlinePanel("related_documents", max_num=50, min_num=1, label="Document"),
+        FieldPanel("video_channel_section_title"),
         FieldPanel("video_link_section_title"),
         StreamFieldPanel("video_link_content"),
     ]    

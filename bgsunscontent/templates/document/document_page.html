@@ -63,13 +63,18 @@
       </div>
 
 <!-- <div class="col-12"> -->
-{% if self.video_link_section_title %}                 
-    <h2 class="text-center" id="page-title">{{self.video_link_section_title}}</h2>
+{% if self.video_channel_section_title %}                 
+    <h2 class="text-center" id="page-title">{{self.video_channel_section_title}}</h2>
+    
+    <iframe src="http://rorywork.github.io/BGSuns-react-app/" width="1100" height="600"></iframe>
 {% endif %}    
 
+{% if self.video_link_section_title %}                 
+    <h2 class="text-center" id="page-title">{{self.video_link_section_title}}</h2>
+{% endif %}
 
 {% for block in page.video_link_content %}
-{% include_block block %}
+  {% include_block block %}
 {% endfor %}
 
 <!-- </div> This div is closed out in base.html ( See Close container div) -->
