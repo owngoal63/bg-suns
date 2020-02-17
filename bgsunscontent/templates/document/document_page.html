@@ -71,12 +71,12 @@
 
 {% if self.video_link_section_title %}                 
     <h2 class="text-center" id="page-title">{{self.video_link_section_title}}</h2>
+    
+  {% for block in page.video_link_content %}
+    {% include_block block %}
+  {% endfor %}
+    
 {% endif %}
-
-{% for block in page.video_link_content %}
-  {% include_block block %}
-{% endfor %}
-
 <!-- </div> This div is closed out in base.html ( See Close container div) -->
 
 {% endblock %}
