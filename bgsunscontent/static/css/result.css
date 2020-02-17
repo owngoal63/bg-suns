@@ -284,3 +284,33 @@ a:hover {
     text-decoration: none !important;
 
 }
+
+/* Popup Tool tip for Match video link */
+
+.match-report .video-button a[data-tool-tip] {
+    position: relative;    
+}
+
+.match-report .video-button a[data-tool-tip]::after {
+    content: attr(data-tool-tip);
+    display:block;
+    position: absolute;
+    background-color: rgb(80,34,123);
+    padding: 0.5em 1.5em; 
+    color: white;
+    border-radius: 5px;
+    font-size:.75em;
+    bottom:100%;
+    left:0;
+    white-space: nowrap;
+    transform:scale(0);
+    transition:
+        transform ease-out 250ms,
+        bottom ease-out 250ms;
+}
+
+.match-report .video-button a[data-tool-tip]:hover::after {
+    transform:scale(1);
+    bottom:130%;
+
+}

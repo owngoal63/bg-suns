@@ -59,7 +59,9 @@
                 <div class="match-report">
                     {{ self.Match_Report|richtext }}
                     {% if self.fixture_video %}
-                        <a href="{{ self.fixture_video }}" target="_blank"><i class="fab fa-youtube fa-2x"></i></a>
+                        <div class="video-button">
+                            <a href="{{ self.fixture_video }}" data-tool-tip="View Match Video" target="_blank"><i class="fab fa-youtube fa-2x"></i></a>
+                        </div>
                     {% endif %}    
                 </div>    
                 <div id="containerx">
