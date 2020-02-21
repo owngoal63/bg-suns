@@ -1,15 +1,21 @@
 {% extends "base.html" %}
 {% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/about.css' %}">
+{% endblock %}
+
 {% load wagtailcore_tags %}
 {% load wagtailimages_tags %}
 
 {% block content %}
 
 <!-- <div class="container"> -->
-    <div class="container-fluid"
-    style="background-image: linear-gradient( rgba(80,34,123,0.8), rgba(80,34,123,0.8)), url('{% static 'images/brown-basketball-on-grey-floor.jpg' %}'); background-size:cover; color: #fff; height: 100vh; ">
+<div class="container-fluid"
+    style="background-image: linear-gradient( rgba(80,34,123,0.8), rgba(80,34,123,0.8)), url('{% static 'images/brown-basketball-on-grey-floor.jpg' %}'); background-size:cover; color: #fff; height: 95vh; ">
 
-    <div class="col-12">
+    <div class="row">
+        <div class="col-12">
     <h2 class="text-center" id="page-title">{{self.subtitle}}</h2>
     
     {% for block in page.content %}
@@ -18,7 +24,6 @@
 
     {% image self.flex_image fill-200x200 as img %}
 
-    <hr>
     <table width="100%">
         <tr>
             <td align="center">
@@ -26,7 +31,7 @@
             </td>
         </tr>
     </table>
-
+</div>
 </div>
 
 <!-- </div> This div is closed out in base.html ( See Close container div) -->

@@ -1,6 +1,13 @@
+.top-scorers-button {
+    text-align: center;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+
 /* Player Card Styles */
 .card-deck{
-    width: 97vw;
+    width: 95vw;
     margin: 0 auto;
 }
 
@@ -119,8 +126,9 @@
 
 
 .containerx .box .details .content h5 {
-  margin:0;
+  margin-top:2px;
   padding: 0;
-  font-size: 16px;
+  font-size: 14px;
   color:#fff;
+  letter-spacing: 1.1px;
 }

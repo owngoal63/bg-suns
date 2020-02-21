@@ -10,7 +10,7 @@
 {% block content %}
 
 <div class="container-fluid"
-    style="background-image: linear-gradient( rgba(80,34,123,0.8), rgba(80,34,123,0.8)), url('{% static 'images/brown-basketball-on-grey-floor.jpg' %}'); background-size:cover; color: #fff; height: 100vh; ">
+    style="background-image: linear-gradient( rgba(80,34,123,0.8), rgba(80,34,123,0.8)), url('{% static 'images/brown-basketball-on-grey-floor.jpg' %}'); background-size:cover; color: #fff; height: 95vh; ">
     <h2 class="text-center" id="page-title">{{self.custom_title}}</h2>
         
         <div class="card-deck">
@@ -22,7 +22,7 @@
             {% if fixture.fixture_status_selector.all.0.status.fixture_status == "Result" %}
                 <a href="{{ fixture.url }}">
             {% endif %}        
-            <div class="card mb-3" style="min-width: 25rem; max-width: 25rem;">
+            <div class="card mb-4" style="min-width: 25rem; max-width: 25rem;">
                 {% if fixture.fixture_status_selector.all.0.status.fixture_status == "Result" %}
                     <h4 id="result">{{ fixture.fixture_status_selector.all.0.status.fixture_status }}</h4>
                 {% else %}

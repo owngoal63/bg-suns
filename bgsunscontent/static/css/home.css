@@ -23,29 +23,57 @@
 }
 
 #news-heading{
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 10px;
+    margin-bottom: 20px;
     text-align: center;
     font-size: 1.5rem;
-
+    font-weight: 400;
+    letter-spacing: 1.5px;
 }
 
-.news-headline {
+
+.news-item h4 {
     font-size: 1.2rem;
+    font-weight: 400;
+    /* letter-spacing: 1.1px; */
+    margin-bottom:5px;
+    
+}
+
+.news-item p {
+    font-size: 1rem;
+    font-weight: 300;
+    max-width: 50ch;
+    margin-top:0px;
+    margin-bottom: 0px;
+    color: whitesmoke;
+}
+
+/* Home Page Main Text Styles */
+
+.headline h1 {
+    margin-top: 35px;
     font-weight: 600;
 }
 
-.story {
-    font-size: 0.3em;
-    font-weight: 300;
+.headline p {
+    color:whitesmoke;
+    margin-top: 5px;
 }
 
-
-/* Home Page Main Text Styles */
-#headline {
-    margin-top: 30px;
+ /* Links on news items */
+a {
+    color: rgb(202, 89, 14);
+    font-weight: 400;
 }
 
-.subtitle {
-    margin-left: 4%;
+a:hover {
+    color:rgb(223,105,26);
+}
+
+/* Basketball Icon on new items */
+
+.fas{
+    color: rgb(223,105,26) !important;
+
 }

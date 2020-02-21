@@ -29,7 +29,7 @@ a:hover {
 section {
     position: relative;
     widows: 100%;
-    min-height: 100vh;
+    /* min-height: 100vh; */
     background: #222;
     display: flex;
     justify-content: space-between;
@@ -58,6 +58,7 @@ section:before {
 
 #page-title {
     margin-top: 30px;
+    font-weight: 600;
 }
 
 #page-subtitle {
@@ -80,7 +81,8 @@ section:before {
 }
 
  .navbar {
-    height: 50px;
+    /* height: 50px; */
+    height:5vh;
     background-color: rgb(223,105,26) !important;
 }
 
@@ -108,7 +110,7 @@ section:before {
 }
 
 .btn-primary {
-    margin-bottom: 5%;
+    margin-bottom: 10px;
 }
 
 /* Social Media Footer Styles */
@@ -130,6 +132,7 @@ section:before {
 hr {
     color: white;
     background-color: rgb(223,105,26);
+    margin: 5px;
 }
 
 /* ------------------------------ */

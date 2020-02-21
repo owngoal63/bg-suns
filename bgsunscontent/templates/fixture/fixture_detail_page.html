@@ -10,7 +10,7 @@
 {% block content %}
  
 <div class="container-fluid center-card"
-    style="background-image: linear-gradient( rgba(80,34,123,0.8), rgba(80,34,123,0.8)), url('{% static 'images/brown-basketball-on-grey-floor.jpg' %}'); background-size:cover; color: #fff; height: 100vh; ">
+    style="background-image: linear-gradient( rgba(80,34,123,0.8), rgba(80,34,123,0.8)), url('{% static 'images/brown-basketball-on-grey-floor.jpg' %}'); background-size:cover; color: #fff; height: 95vh; ">
     <h2 class="text-center" id="page-title">Match Details</h2>
     
         <!-- <div class="card-deck"> -->
@@ -32,7 +32,7 @@
                 <div id="container">
                     <div class="match-details">
                         <div class="team1">
-                            <img src="{{ img1.url }}" alt="{{ img1.alt }}"/><h5><b>{{ self.HT_FT_PTS }}</b></h5>
+                            <img src="{{ img1.url }}" alt="{{ img1.alt }}"/><h5>{{ self.HT_FT_PTS }}</h5>
                             <h6 class="scorers">
                                 {{ self.Home_Team_Scorers|richtext }}
                             </h6>
@@ -49,7 +49,7 @@
                     
                     <div class="match-details">
                         <div class="team2">
-                            <img src="{{ img2.url }}" alt="{{ img2.alt }}"/><h5><b>{{ self.AT_FT_PTS }}</b></h5>
+                            <img src="{{ img2.url }}" alt="{{ img2.alt }}"/><h5>{{ self.AT_FT_PTS }}</h5>
                             <h6 class="scorers">
                                 {{ self.Away_Team_Scorers|richtext }}
                             </h6>
